@@ -466,9 +466,13 @@ button{cursor:pointer;font-family:'DM Sans',sans-serif}
   <div class="pb-pages">
     <button class="pb-btn active" onclick="goPage('home')">🏠 Home</button>
     <button class="pb-btn" onclick="goPage('shop')">🛍 Shop</button>
+    <button class="pb-btn" onclick="goPage('servizi')">⚡ Servizi</button>
+    <button class="pb-btn" onclick="goPage('scuola')">🎒 Scuola</button>
+    <button class="pb-btn" onclick="goPage('stampe')">🖨️ Stampe</button>
     <button class="pb-btn" onclick="goPage('product')">👕 Maglietta</button>
     <button class="pb-btn" onclick="goPage('cart')">🛒 Carrello</button>
     <button class="pb-btn" onclick="goPage('checkout')">💳 Checkout</button>
+    <button class="pb-btn" onclick="goPage('contatti')">📍 Contatti</button>
   </div>
 </div>
 
@@ -490,11 +494,11 @@ button{cursor:pointer;font-family:'DM Sans',sans-serif}
     <ul class="nav-links">
       <li><a onclick="goPage('home')">Home</a></li>
       <li><a onclick="goPage('shop')">Shop</a></li>
-      <li><a>Servizi</a></li>
-      <li><a>Scuola</a></li>
-      <li><a>Stampe</a></li>
+      <li><a onclick="goPage('servizi')">Servizi</a></li>
+      <li><a onclick="goPage('scuola')">Scuola &amp; Liste</a></li>
+      <li><a onclick="goPage('stampe')">Stampe</a></li>
       <li><a onclick="goPage('product')" class="gold">👕 Magliette</a></li>
-      <li><a>Contatti</a></li>
+      <li><a onclick="goPage('contatti')">Contatti</a></li>
     </ul>
     <button class="nav-cart" onclick="goPage('cart')">
       🛒 Carrello
@@ -580,9 +584,9 @@ button{cursor:pointer;font-family:'DM Sans',sans-serif}
       <div>
         <div class="footer-h">Menu</div>
         <ul class="footer-links">
-          <li>Home</li><li onclick="goPage('shop')">Shop</li><li>Servizi</li>
-          <li>Scuola &amp; Liste</li><li>Stampe</li><li onclick="goPage('product')" style="color:var(--gold)">👕 Magliette</li>
-          <li>Contatti</li>
+          <li>Home</li><li onclick="goPage('shop')">Shop</li><li onclick="goPage('servizi')" style="cursor:pointer">Servizi</li>
+          <li onclick="goPage('scuola')" style="cursor:pointer">Scuola &amp; Liste</li><li onclick="goPage('stampe')" style="cursor:pointer">Stampe</li><li onclick="goPage('product')" style="color:var(--gold)">👕 Magliette</li>
+          <li onclick="goPage('contatti')" style="cursor:pointer">Contatti</li>
         </ul>
       </div>
       <div>
@@ -608,9 +612,9 @@ button{cursor:pointer;font-family:'DM Sans',sans-serif}
     <ul class="nav-links">
       <li><a onclick="goPage('home')">Home</a></li>
       <li><a onclick="goPage('shop')" style="color:var(--teal)">Shop</a></li>
-      <li><a>Servizi</a></li><li><a>Scuola</a></li><li><a>Stampe</a></li>
+      <li><a onclick="goPage('servizi')">Servizi</a></li><li><a onclick="goPage('scuola')">Scuola &amp; Liste</a></li><li><a onclick="goPage('stampe')">Stampe</a></li>
       <li><a onclick="goPage('product')" class="gold">👕 Magliette</a></li>
-      <li><a>Contatti</a></li>
+      <li><a onclick="goPage('contatti')">Contatti</a></li>
     </ul>
     <button class="nav-cart" onclick="goPage('cart')">🛒 <span class="cart-count" id="cart-count-shop">0</span></button>
   </nav>
@@ -947,6 +951,421 @@ button{cursor:pointer;font-family:'DM Sans',sans-serif}
   </div>
 </div>
 
+<!-- ════════════════════════ SERVIZI ════════════════════════ -->
+<div id="page-servizi" class="page">
+  <div class="topbar">
+    <span>📍 Via Roma 7, San Giovanni Suergiu &nbsp;|&nbsp; <a href="#">📞 0781 68041</a></span>
+    <div class="topbar-right"><span>🕐 Lun–Sab 08–13 / 17–20</span></div>
+  </div>
+  <nav class="sitenav">
+    <div class="nav-brand">Cartolibreria Mannai Orietta</div>
+    <ul class="nav-links">
+      <li><a onclick="goPage('home')">Home</a></li>
+      <li><a onclick="goPage('shop')">Shop</a></li>
+      <li><a onclick="goPage('servizi')" style="color:var(--teal)">Servizi</a></li>
+      <li><a onclick="goPage('scuola')">Scuola &amp; Liste</a></li>
+      <li><a onclick="goPage('stampe')">Stampe</a></li>
+      <li><a onclick="goPage('product')" class="gold">👕 Magliette</a></li>
+      <li><a onclick="goPage('contatti')">Contatti</a></li>
+    </ul>
+    <button class="nav-cart" onclick="goPage('cart')">🛒 <span class="cart-count" id="cc-serv">0</span></button>
+  </nav>
+
+  <!-- Header -->
+  <div style="background:linear-gradient(135deg,var(--teal-dark),var(--teal));padding:56px 24px;text-align:center;color:white">
+    <div class="section-label" style="background:rgba(255,255,255,.15);color:var(--gold)">In negozio</div>
+    <h1 style="font-size:clamp(2rem,5vw,3rem);color:white;margin:10px 0 10px">⚡ I nostri servizi</h1>
+    <p style="color:rgba(255,255,255,.8);font-size:.95rem;max-width:520px;margin:0 auto">Tutto quello che ti serve, disponibile subito. Portaci il tuo documento, noi pensiamo al resto.</p>
+  </div>
+
+  <div class="container" style="padding:56px 20px">
+    <div class="servizi-grid">
+      <div class="serv-card">
+        <div class="serv-num">01</div>
+        <h3>🖨️ Stampe Bianco e Nero</h3>
+        <p>Documenti, moduli, tessine scolastiche. Formato A4 e A3, singole o multiple pagine.</p>
+        <div class="serv-tag">Immediato</div>
+        <div style="margin-top:12px;font-size:.78rem;color:rgba(255,255,255,.6)">A4 singola · A4 fronte/retro · A3</div>
+      </div>
+      <div class="serv-card">
+        <div class="serv-num">02</div>
+        <h3>🌈 Stampe a Colori</h3>
+        <p>Foto, locandine, volantini, presentazioni. Alta qualità, colori vividi.</p>
+        <div class="serv-tag">A4 / A3</div>
+        <div style="margin-top:12px;font-size:.78rem;color:rgba(255,255,255,.6)">Foto · Poster · Grafici</div>
+      </div>
+      <div class="serv-card">
+        <div class="serv-num">03</div>
+        <h3>📄 Fotocopie</h3>
+        <p>Singole o in serie, bianco e nero e colore. Veloci e convenienti.</p>
+        <div class="serv-tag">Immediato</div>
+        <div style="margin-top:12px;font-size:.78rem;color:rgba(255,255,255,.6)">1 copia · Serie · F/R</div>
+      </div>
+      <div class="serv-card">
+        <div class="serv-num">04</div>
+        <h3>📡 Scansioni</h3>
+        <p>Scansione ad alta risoluzione. Consegna file su chiavetta USB o via email.</p>
+        <div class="serv-tag">5–10 min</div>
+        <div style="margin-top:12px;font-size:.78rem;color:rgba(255,255,255,.6)">JPG · PDF · Alta risoluzione</div>
+      </div>
+      <div class="serv-card">
+        <div class="serv-num">05</div>
+        <h3>📧 Email e Fax</h3>
+        <p>Inviamo documenti per te via email o fax. Assistenza inclusa in ogni passo.</p>
+        <div class="serv-tag">Assistito</div>
+        <div style="margin-top:12px;font-size:.78rem;color:rgba(255,255,255,.6)">Enti · Uffici · Privati</div>
+      </div>
+      <div class="serv-card" onclick="goPage('product')" style="cursor:pointer;border-color:var(--gold);border-width:2px">
+        <div class="serv-num">06</div>
+        <h3>👕 Magliette Personalizzate</h3>
+        <p>Stampa il tuo logo su t-shirt, felpe e polo. Anche solo 1 pezzo!</p>
+        <div class="serv-tag" style="background:rgba(201,168,76,.35)">✨ Nuovo servizio</div>
+        <div style="margin-top:12px;font-size:.78rem;color:rgba(255,255,255,.6)">T-Shirt · Felpa · Polo</div>
+      </div>
+    </div>
+
+    <!-- Info prezzi -->
+    <div style="margin-top:48px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:28px">
+      <h3 style="color:var(--gold);font-size:1.4rem;margin-bottom:16px;font-family:'Cormorant Garamond',serif">💡 Come funziona</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px">
+        <div style="display:flex;align-items:flex-start;gap:12px">
+          <div style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem">📁</div>
+          <div><strong style="color:white;font-size:.88rem;display:block;margin-bottom:3px">Porta il file</strong><span style="font-size:.78rem;color:rgba(255,255,255,.65)">Chiavetta USB, email o noi lo stampiamo direttamente da web.</span></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px">
+          <div style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem">⏱️</div>
+          <div><strong style="color:white;font-size:.88rem;display:block;margin-bottom:3px">Attendi pochi minuti</strong><span style="font-size:.78rem;color:rgba(255,255,255,.65)">La maggior parte dei lavori è pronta in 5–10 minuti.</span></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px">
+          <div style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem">💶</div>
+          <div><strong style="color:white;font-size:.88rem;display:block;margin-bottom:3px">Prezzi onesti</strong><span style="font-size:.78rem;color:rgba(255,255,255,.65)">Chiedi il preventivo direttamente in negozio o al telefono.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="sitefooter" style="padding-top:36px">
+    <div class="footer-bottom" style="max-width:1100px;margin:0 auto"><span>© 2026 Cartolibreria Mannai Orietta Sas</span><span>Via Roma 7 · 0781 68041</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════════ SCUOLA ════════════════════════ -->
+<div id="page-scuola" class="page">
+  <div class="topbar">
+    <span>📍 Via Roma 7, San Giovanni Suergiu &nbsp;|&nbsp; <a href="#">📞 0781 68041</a></span>
+    <div class="topbar-right"><span>🕐 Lun–Sab 08–13 / 17–20</span></div>
+  </div>
+  <nav class="sitenav">
+    <div class="nav-brand">Cartolibreria Mannai Orietta</div>
+    <ul class="nav-links">
+      <li><a onclick="goPage('home')">Home</a></li>
+      <li><a onclick="goPage('shop')">Shop</a></li>
+      <li><a onclick="goPage('servizi')">Servizi</a></li>
+      <li><a onclick="goPage('scuola')" style="color:var(--teal)">Scuola &amp; Liste</a></li>
+      <li><a onclick="goPage('stampe')">Stampe</a></li>
+      <li><a onclick="goPage('product')" class="gold">👕 Magliette</a></li>
+      <li><a onclick="goPage('contatti')">Contatti</a></li>
+    </ul>
+    <button class="nav-cart" onclick="goPage('cart')">🛒 <span class="cart-count" id="cc-scuola">0</span></button>
+  </nav>
+
+  <div style="background:linear-gradient(135deg,var(--teal-dark),var(--teal));padding:56px 24px;text-align:center;color:white">
+    <div class="section-label" style="background:rgba(255,255,255,.15);color:var(--gold)">Anno scolastico</div>
+    <h1 style="font-size:clamp(2rem,5vw,3rem);color:white;margin:10px 0 10px">🎒 Scuola &amp; Liste</h1>
+    <p style="color:rgba(255,255,255,.8);font-size:.95rem;max-width:520px;margin:0 auto">Tutto il materiale scolastico, disponibile in negozio. Portaci la lista, pensiamo noi a prepararti tutto.</p>
+  </div>
+
+  <div class="container" style="padding:56px 20px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+
+      <!-- Form lista scolastica -->
+      <div style="background:white;border-radius:var(--r);padding:32px;box-shadow:var(--shadow);border-left:4px solid var(--teal)">
+        <h3 style="font-size:1.5rem;color:var(--teal-dark);margin-bottom:8px">📋 Inviaci la lista</h3>
+        <p style="font-size:.88rem;color:var(--gray);line-height:1.7;margin-bottom:22px">Mandaci la lista scolastica in anticipo e la prepariamo noi. Basta venire a ritirare!</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+          <input class="form-input" placeholder="Nome genitore *" style="border:1.5px solid var(--teal-mid);border-radius:var(--r-sm);padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:.87rem;width:100%;outline:none">
+          <input class="form-input" placeholder="Telefono *" style="border:1.5px solid var(--teal-mid);border-radius:var(--r-sm);padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:.87rem;width:100%;outline:none">
+        </div>
+        <input class="form-input" placeholder="Nome alunno e classe (es. Marco · 3ª Media)" style="border:1.5px solid var(--teal-mid);border-radius:var(--r-sm);padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:.87rem;width:100%;outline:none;margin-bottom:10px;display:block">
+        <textarea placeholder="Incolla qui la lista scolastica oppure descrivici cosa ti serve..." rows="5" style="width:100%;padding:11px 14px;border:1.5px solid var(--teal-mid);border-radius:var(--r-sm);font-family:'DM Sans',sans-serif;font-size:.87rem;resize:vertical;outline:none;margin-bottom:14px"></textarea>
+        <button class="btn btn-teal" style="width:100%;justify-content:center;border:none;padding:14px;font-size:.95rem" onclick="this.textContent='✅ Lista ricevuta! Ti ricontattiamo presto.';this.style.background='#22c55e'">
+          📨 Invia lista scolastica
+        </button>
+        <p style="font-size:.75rem;color:var(--gray);text-align:center;margin-top:10px">Ti ricontattiamo entro 24 ore per confermare la disponibilità</p>
+      </div>
+
+      <!-- FAQ -->
+      <div>
+        <h3 style="font-size:1.5rem;color:var(--teal-dark);margin-bottom:20px">❓ Domande frequenti</h3>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:white;border-radius:var(--r-sm);padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.06)">
+            <div style="font-weight:600;font-size:.88rem;color:var(--teal-dark);margin-bottom:6px">📅 Quando iniziate con il materiale scolastico?</div>
+            <p style="font-size:.82rem;color:var(--gray);line-height:1.6">Di solito da luglio iniziamo a ricevere le prime forniture. Agosto e settembre sono i mesi più intensi — consigliamo di venire presto per trovare tutto disponibile.</p>
+          </div>
+          <div style="background:white;border-radius:var(--r-sm);padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.06)">
+            <div style="font-weight:600;font-size:.88rem;color:var(--teal-dark);margin-bottom:6px">📦 Posso mandare la lista e venire a ritirare?</div>
+            <p style="font-size:.82rem;color:var(--gray);line-height:1.6">Assolutamente sì! Mandaci la lista tramite questo modulo o chiamaci. Prepariamo tutto e basta che venite a ritirare e pagare. Nessun sovrapprezzo.</p>
+          </div>
+          <div style="background:white;border-radius:var(--r-sm);padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.06)">
+            <div style="font-weight:600;font-size:.88rem;color:var(--teal-dark);margin-bottom:6px">📚 Vendete anche i libri scolastici?</div>
+            <p style="font-size:.82rem;color:var(--gray);line-height:1.6">Sì, abbiamo una selezione di libri scolastici adottati dalle scuole del territorio. Contattateci con ISBN o titolo per verificare la disponibilità.</p>
+          </div>
+          <div style="background:white;border-radius:var(--r-sm);padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.06)">
+            <div style="font-weight:600;font-size:.88rem;color:var(--teal-dark);margin-bottom:6px">🎒 Avete zaini e astucci?</div>
+            <p style="font-size:.82rem;color:var(--gray);line-height:1.6">Sì, ogni anno aggiorniamo la nostra selezione di zaini, astucci e accessori scolastici. Passa in negozio per vedere il catalogo disponibile.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="sitefooter" style="padding-top:36px">
+    <div class="footer-bottom" style="max-width:1100px;margin:0 auto"><span>© 2026 Cartolibreria Mannai Orietta Sas</span><span>Via Roma 7 · 0781 68041</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════════ STAMPE ════════════════════════ -->
+<div id="page-stampe" class="page">
+  <div class="topbar">
+    <span>📍 Via Roma 7, San Giovanni Suergiu &nbsp;|&nbsp; <a href="#">📞 0781 68041</a></span>
+    <div class="topbar-right"><span>🕐 Lun–Sab 08–13 / 17–20</span></div>
+  </div>
+  <nav class="sitenav">
+    <div class="nav-brand">Cartolibreria Mannai Orietta</div>
+    <ul class="nav-links">
+      <li><a onclick="goPage('home')">Home</a></li>
+      <li><a onclick="goPage('shop')">Shop</a></li>
+      <li><a onclick="goPage('servizi')">Servizi</a></li>
+      <li><a onclick="goPage('scuola')">Scuola &amp; Liste</a></li>
+      <li><a onclick="goPage('stampe')" style="color:var(--teal)">Stampe</a></li>
+      <li><a onclick="goPage('product')" class="gold">👕 Magliette</a></li>
+      <li><a onclick="goPage('contatti')">Contatti</a></li>
+    </ul>
+    <button class="nav-cart" onclick="goPage('cart')">🛒 <span class="cart-count" id="cc-stampe">0</span></button>
+  </nav>
+
+  <div style="background:linear-gradient(135deg,var(--teal-dark),var(--teal));padding:56px 24px;text-align:center;color:white">
+    <div class="section-label" style="background:rgba(255,255,255,.15);color:var(--gold)">Copisteria</div>
+    <h1 style="font-size:clamp(2rem,5vw,3rem);color:white;margin:10px 0 10px">🖨️ Stampe &amp; Copisteria</h1>
+    <p style="color:rgba(255,255,255,.8);font-size:.95rem;max-width:520px;margin:0 auto">Stampe, fotocopie, scansioni e molto altro. Pronte in pochi minuti, prezzi onesti.</p>
+  </div>
+
+  <div class="container" style="padding:48px 20px">
+
+    <!-- Listino prezzi -->
+    <div style="background:linear-gradient(135deg,var(--teal-pale),white);border-radius:16px;padding:36px;border:1px solid var(--teal-mid);margin-bottom:40px">
+      <div style="text-align:center;margin-bottom:28px">
+        <div class="section-label">Listino prezzi</div>
+        <h2 class="section-title" style="margin-top:8px">Cosa puoi stampare</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px">
+        <div style="background:white;border:1.5px solid var(--teal-mid);border-radius:var(--r);padding:18px;text-align:center">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-bottom:6px">B/N A4</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--teal-dark)">0,10 €</div>
+          <div style="font-size:.75rem;color:var(--gray)">singola facciata</div>
+        </div>
+        <div style="background:white;border:1.5px solid var(--teal-mid);border-radius:var(--r);padding:18px;text-align:center">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-bottom:6px">B/N A3</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--teal-dark)">0,20 €</div>
+          <div style="font-size:.75rem;color:var(--gray)">singola facciata</div>
+        </div>
+        <div style="background:white;border:1.5px solid var(--gold);border-radius:var(--r);padding:18px;text-align:center;box-shadow:0 4px 16px rgba(201,168,76,.2)">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">COLORE A4</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--teal-dark)">0,50 €</div>
+          <div style="font-size:.75rem;color:var(--gray)">singola facciata</div>
+        </div>
+        <div style="background:white;border:1.5px solid var(--teal-mid);border-radius:var(--r);padding:18px;text-align:center">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-bottom:6px">COLORE A3</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--teal-dark)">1,00 €</div>
+          <div style="font-size:.75rem;color:var(--gray)">singola facciata</div>
+        </div>
+        <div style="background:white;border:1.5px solid var(--teal-mid);border-radius:var(--r);padding:18px;text-align:center">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-bottom:6px">SCANSIONE</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--teal-dark)">0,50 €</div>
+          <div style="font-size:.75rem;color:var(--gray)">per pagina</div>
+        </div>
+        <div style="background:white;border:1.5px solid var(--teal-mid);border-radius:var(--r);padding:18px;text-align:center">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-bottom:6px">FAX / EMAIL</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--teal-dark)">1,00 €</div>
+          <div style="font-size:.75rem;color:var(--gray)">invio assistito</div>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:.78rem;color:var(--gray);margin-top:16px">* Prezzi indicativi. Chiedi conferma in negozio per lavori di grande quantità.</p>
+    </div>
+
+    <!-- Come inviare file + Form preventivo -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
+      <div>
+        <div style="background:var(--teal-pale);border-radius:var(--r);padding:24px;border:1px solid var(--teal-mid);margin-bottom:20px">
+          <h4 style="color:var(--teal-dark);font-size:1rem;margin-bottom:10px">📁 Come inviare il file</h4>
+          <p style="font-size:.83rem;color:var(--gray);line-height:1.6;margin-bottom:10px">Portaci una chiavetta USB con il file, oppure invialo all'email del negozio prima di venire.</p>
+          <div style="display:inline-flex;align-items:center;gap:8px;background:white;border:1.5px dashed var(--teal);border-radius:var(--r-sm);padding:9px 14px;font-size:.8rem;color:var(--teal);font-weight:500">
+            📧 [inserire email negozio]
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="background:var(--teal-pale);border-radius:var(--r);padding:18px;border:1px solid var(--teal-mid)">
+            <h5 style="color:var(--teal-dark);font-size:.85rem;margin-bottom:5px">📄 Formati accettati</h5>
+            <p style="font-size:.78rem;color:var(--gray);line-height:1.5">PDF, Word, Excel, JPG, PNG, PowerPoint</p>
+          </div>
+          <div style="background:var(--teal-pale);border-radius:var(--r);padding:18px;border:1px solid var(--teal-mid)">
+            <h5 style="color:var(--teal-dark);font-size:.85rem;margin-bottom:5px">⏱ Tempi</h5>
+            <p style="font-size:.78rem;color:var(--gray);line-height:1.5">Pronti in 5–15 minuti per lavori standard</p>
+          </div>
+          <div style="background:var(--teal-pale);border-radius:var(--r);padding:18px;border:1px solid var(--teal-mid)">
+            <h5 style="color:var(--teal-dark);font-size:.85rem;margin-bottom:5px">📦 Grandi quantità</h5>
+            <p style="font-size:.78rem;color:var(--gray);line-height:1.5">Per ordini di 50+ pagine chiama prima per accordarti sui tempi</p>
+          </div>
+          <div style="background:var(--teal-pale);border-radius:var(--r);padding:18px;border:1px solid var(--teal-mid)">
+            <h5 style="color:var(--teal-dark);font-size:.85rem;margin-bottom:5px">💶 Pagamento</h5>
+            <p style="font-size:.78rem;color:var(--gray);line-height:1.5">Contanti o bancomat direttamente in negozio</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--gray-light);border-radius:var(--r);padding:28px">
+        <h3 style="font-size:1.2rem;color:var(--teal-dark);margin-bottom:18px">📨 Richiedi preventivo</h3>
+        <input class="form-input" placeholder="Nome e telefono *" style="border:1.5px solid #e2e8f0;border-radius:var(--r-sm);padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:.87rem;width:100%;outline:none;margin-bottom:10px;display:block;background:white">
+        <select style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:var(--r-sm);font-family:'DM Sans',sans-serif;font-size:.87rem;color:var(--charcoal);background:white;margin-bottom:10px;outline:none">
+          <option value="" disabled selected>Tipo di lavoro *</option>
+          <option>Stampe bianco e nero</option>
+          <option>Stampe a colori</option>
+          <option>Fotocopie</option>
+          <option>Scansioni</option>
+          <option>Invio fax / email</option>
+        </select>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+          <input class="form-input" placeholder="N° pagine" type="number" style="border:1.5px solid #e2e8f0;border-radius:var(--r-sm);padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:.87rem;width:100%;outline:none;background:white">
+          <select style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:var(--r-sm);font-family:'DM Sans',sans-serif;font-size:.87rem;color:var(--charcoal);background:white;outline:none">
+            <option>Formato A4</option>
+            <option>Formato A3</option>
+          </select>
+        </div>
+        <textarea placeholder="Note o dettagli aggiuntivi..." rows="3" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:var(--r-sm);font-family:'DM Sans',sans-serif;font-size:.87rem;resize:vertical;outline:none;background:white;margin-bottom:12px"></textarea>
+        <button class="btn btn-teal" style="width:100%;justify-content:center;border:none;padding:13px" onclick="this.textContent='✅ Richiesta inviata!';this.style.background='#22c55e'">
+          📨 Invia richiesta preventivo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="sitefooter" style="padding-top:36px">
+    <div class="footer-bottom" style="max-width:1100px;margin:0 auto"><span>© 2026 Cartolibreria Mannai Orietta Sas</span><span>Via Roma 7 · 0781 68041</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════════ CONTATTI ════════════════════════ -->
+<div id="page-contatti" class="page">
+  <div class="topbar">
+    <span>📍 Via Roma 7, San Giovanni Suergiu &nbsp;|&nbsp; <a href="#">📞 0781 68041</a></span>
+    <div class="topbar-right"><span>🕐 Lun–Sab 08–13 / 17–20</span></div>
+  </div>
+  <nav class="sitenav">
+    <div class="nav-brand">Cartolibreria Mannai Orietta</div>
+    <ul class="nav-links">
+      <li><a onclick="goPage('home')">Home</a></li>
+      <li><a onclick="goPage('shop')">Shop</a></li>
+      <li><a onclick="goPage('servizi')">Servizi</a></li>
+      <li><a onclick="goPage('scuola')">Scuola &amp; Liste</a></li>
+      <li><a onclick="goPage('stampe')">Stampe</a></li>
+      <li><a onclick="goPage('product')" class="gold">👕 Magliette</a></li>
+      <li><a onclick="goPage('contatti')" style="color:var(--teal)">Contatti</a></li>
+    </ul>
+    <button class="nav-cart" onclick="goPage('cart')">🛒 <span class="cart-count" id="cc-cont">0</span></button>
+  </nav>
+
+  <div style="background:linear-gradient(135deg,var(--teal-dark),var(--teal));padding:56px 24px;text-align:center;color:white">
+    <div class="section-label" style="background:rgba(255,255,255,.15);color:var(--gold)">Dove siamo</div>
+    <h1 style="font-size:clamp(2rem,5vw,3rem);color:white;margin:10px 0 10px">📍 Contatti</h1>
+    <p style="color:rgba(255,255,255,.8);font-size:.95rem;max-width:480px;margin:0 auto">Siamo a San Giovanni Suergiu, nel cuore del Sulcis Iglesiente. Vieni a trovarci!</p>
+  </div>
+
+  <div class="container" style="padding:56px 20px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+
+      <!-- Info contatto -->
+      <div>
+        <div style="background:var(--cream);border-radius:var(--r);padding:28px;margin-bottom:20px">
+          <h4 style="font-size:.95rem;color:var(--teal-dark);margin-bottom:16px;display:flex;align-items:center;gap:8px">📋 Informazioni</h4>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:.88rem;color:var(--charcoal)">
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <span style="font-size:1.1rem">📍</span>
+              <div><strong>Indirizzo</strong><br>Via Roma, 7<br>09010 San Giovanni Suergiu (SU)<br>Sardegna, Italia</div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <span style="font-size:1.1rem">📞</span>
+              <div><strong>Telefono</strong><br><a href="tel:078168041" style="color:var(--teal);font-weight:600">0781 68041</a></div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <span style="font-size:1.1rem">📧</span>
+              <div><strong>Email</strong><br><span style="color:var(--teal)">[inserire email negozio]</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orari -->
+        <div style="background:white;border-radius:var(--r);padding:24px;box-shadow:var(--shadow)">
+          <h4 style="font-size:.95rem;color:var(--teal-dark);margin-bottom:14px;display:flex;align-items:center;gap:8px">🕐 Orari di apertura</h4>
+          <table style="width:100%;border-collapse:collapse;font-size:.86rem">
+            <tr style="border-bottom:1px solid var(--teal-mid)"><td style="padding:9px 0">Lunedì</td><td style="text-align:right;font-weight:600;color:var(--teal-dark)">08:00–13:00 / 17:00–20:00</td></tr>
+            <tr style="border-bottom:1px solid var(--teal-mid)"><td style="padding:9px 0">Martedì</td><td style="text-align:right;font-weight:600;color:var(--teal-dark)">08:00–13:00 / 17:00–20:00</td></tr>
+            <tr style="border-bottom:1px solid var(--teal-mid)"><td style="padding:9px 0">Mercoledì</td><td style="text-align:right;font-weight:600;color:var(--teal-dark)">08:00–13:00 / 17:00–20:00</td></tr>
+            <tr style="border-bottom:1px solid var(--teal-mid)"><td style="padding:9px 0">Giovedì</td><td style="text-align:right;font-weight:600;color:var(--teal-dark)">08:00–13:00 / 17:00–20:00</td></tr>
+            <tr style="border-bottom:1px solid var(--teal-mid)"><td style="padding:9px 0">Venerdì</td><td style="text-align:right;font-weight:600;color:var(--teal-dark)">08:00–13:00 / 17:00–20:00</td></tr>
+            <tr style="border-bottom:1px solid var(--teal-mid)"><td style="padding:9px 0">Sabato</td><td style="text-align:right;font-weight:600;color:var(--teal-dark)">08:00–13:00 / 17:00–20:00</td></tr>
+            <tr><td style="padding:9px 0">Domenica</td><td style="text-align:right;color:var(--gray)">Chiuso</td></tr>
+          </table>
+        </div>
+
+        <!-- CTA buttons -->
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
+          <a href="tel:078168041" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:white;border:1.5px solid var(--teal-mid);border-radius:var(--r-sm);color:var(--charcoal);font-weight:500;font-size:.88rem;transition:all .2s;text-decoration:none" onmouseover="this.style.borderColor='var(--teal)';this.style.background='var(--teal-pale)'" onmouseout="this.style.borderColor='var(--teal-mid)';this.style.background='white'">
+            <span style="width:36px;height:36px;background:var(--teal-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">📞</span>
+            Chiama: 0781 68041
+          </a>
+          <a href="https://maps.google.com/?q=Via+Roma+7+San+Giovanni+Suergiu" target="_blank" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:white;border:1.5px solid var(--teal-mid);border-radius:var(--r-sm);color:var(--charcoal);font-weight:500;font-size:.88rem;transition:all .2s;text-decoration:none" onmouseover="this.style.borderColor='var(--teal)';this.style.background='var(--teal-pale)'" onmouseout="this.style.borderColor='var(--teal-mid)';this.style.background='white'">
+            <span style="width:36px;height:36px;background:var(--teal-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">🗺️</span>
+            Apri su Google Maps
+          </a>
+          <a href="https://maps.google.com/?q=Via+Roma+7+San+Giovanni+Suergiu&travelmode=driving" target="_blank" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:white;border:1.5px solid var(--teal-mid);border-radius:var(--r-sm);color:var(--charcoal);font-weight:500;font-size:.88rem;transition:all .2s;text-decoration:none" onmouseover="this.style.borderColor='var(--teal)';this.style.background='var(--teal-pale)'" onmouseout="this.style.borderColor='var(--teal-mid)';this.style.background='white'">
+            <span style="width:36px;height:36px;background:var(--teal-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">🧭</span>
+            Come raggiungerci
+          </a>
+        </div>
+      </div>
+
+      <!-- Mappa placeholder + posizione -->
+      <div>
+        <div style="background:linear-gradient(135deg,var(--teal-pale),#c8e6e6);border-radius:var(--r);height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--teal);font-size:.9rem;font-weight:500;border:2px dashed var(--teal-mid);text-align:center;margin-bottom:20px">
+          <span style="font-size:2.5rem">🗺️</span>
+          <strong>Cartolibreria Mannai Orietta</strong>
+          <span style="font-size:.83rem;color:var(--gray)">Via Roma, 7 · San Giovanni Suergiu</span>
+          <a href="https://maps.google.com/?q=Via+Roma+7+San+Giovanni+Suergiu" target="_blank" style="display:inline-block;margin-top:6px;padding:8px 18px;background:var(--teal);color:white;border-radius:50px;font-size:.8rem;font-weight:600;text-decoration:none">Apri Google Maps →</a>
+          <span style="font-size:.72rem;color:var(--gray)">(La mappa reale sarà integrata nel sito finale)</span>
+        </div>
+
+        <div style="background:white;border-radius:var(--r);padding:24px;box-shadow:var(--shadow)">
+          <h4 style="font-size:.95rem;color:var(--teal-dark);margin-bottom:14px">📍 Come raggiungerci</h4>
+          <p style="font-size:.85rem;color:var(--gray);line-height:1.7;margin-bottom:10px">Siamo nel centro di San Giovanni Suergiu, in Via Roma al civico 7. Il negozio si trova nel cuore del paese, facilmente raggiungibile a piedi dal centro.</p>
+          <p style="font-size:.85rem;color:var(--gray);line-height:1.7;margin-bottom:16px">A pochi minuti da: Carbonia, Sant'Antioco, Calasetta, Giba, Tratalias.</p>
+          <div style="background:var(--teal-pale);border-radius:var(--r-sm);padding:12px;font-size:.82rem;color:var(--teal-dark);border:1px solid var(--teal-mid)">
+            🅿️ <strong>Parcheggio:</strong> disponibile nelle vicinanze del negozio in Via Roma.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="sitefooter" style="padding-top:36px">
+    <div class="footer-grid" style="max-width:1100px;margin:0 auto;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.15)">
+      <div><div class="footer-brand">Cartolibreria Mannai Orietta</div><p class="footer-desc">Cartoleria, stampe, articoli scuola e magliette personalizzate a San Giovanni Suergiu.</p></div>
+      <div><div class="footer-h">Menu</div><ul class="footer-links"><li onclick="goPage('home')" style="cursor:pointer">Home</li><li onclick="goPage('shop')" style="cursor:pointer">Shop</li><li onclick="goPage('servizi')" style="cursor:pointer">Servizi</li><li onclick="goPage('scuola')" style="cursor:pointer">Scuola &amp; Liste</li><li onclick="goPage('stampe')" style="cursor:pointer">Stampe</li><li onclick="goPage('product')" style="cursor:pointer;color:var(--gold)">👕 Magliette</li></ul></div>
+      <div><div class="footer-h">Orari</div><div class="footer-orari"><strong style="color:var(--gold)">Lun – Sab</strong><br>08:00–13:00 / 17:00–20:00<br><span style="color:rgba(255,255,255,.4)">Domenica: Chiuso</span></div></div>
+    </div>
+    <div class="footer-bottom" style="max-width:1100px;margin:22px auto 0"><span>© 2026 Cartolibreria Mannai Orietta Sas</span><span>P.IVA [inserire]</span></div>
+  </footer>
+</div>
+
 <script>
 // ═══════════════════════════════════════
 // STATO GLOBALE
@@ -994,7 +1413,7 @@ function goPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   document.querySelectorAll('.pb-btn').forEach(b => b.classList.remove('active'));
-  const map = { home:0, shop:1, product:2, cart:3, checkout:4 };
+  const map = { home:0, shop:1, servizi:2, scuola:3, stampe:4, product:5, cart:6, checkout:7, contatti:8 };
   document.querySelectorAll('.pb-btn')[map[id]]?.classList.add('active');
   window.scrollTo(0, 0);
   updateCartCounts();
